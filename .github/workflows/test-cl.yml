@@ -1,0 +1,22 @@
+name: Testing App
+on:
+    push:
+      branches: [main]
+jobs:
+    test-jobs:
+      runs-on: ubuntu-latest
+      defaults:
+          run:
+              working-directory: backend
+      steps:
+          - name: checkout repo
+            uses: actions/checkout@v4
+
+          - name: Setup Node
+            uses: actions/setup-node@v4
+
+          - name: install Dependency
+            run: npm install
+
+          - name: Run Test
+            run: npm steps
