@@ -20,3 +20,6 @@ jobs:
 
           - name: Run Test
             run: npm steps
+
+          - name: Build
+            run: npm run Build
